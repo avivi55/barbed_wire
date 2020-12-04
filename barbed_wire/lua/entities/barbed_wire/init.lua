@@ -34,7 +34,9 @@ end
 end*/
 
 function ENT:OnTakeDamage( dmg )
-	local melee_damage = (dmg:GetDamageType() == DMG_GENERIC)
+	print(dmg:GetDamageType())
+	local melee_damage = (dmg:GetDamageType() == DMG_GENERIC or dmg:GetDamageType() == DMG_CLUB)
+	local fire_damage = (dmg:GetDamageType() == 268435464 or dmg:GetDamageType() == DMG_BURN)
 	local bullet_damage = (dmg:GetDamageType() == 8194 or dmg:GetDamageType() == DMG_BULLET) --+ magic fuckery
 	local vehicle_damage = (dmg:GetDamageType() == DMG_DIRECT or dmg:GetDamageType() == DMG_BLAST or dmg:GetDamageType() == DMG_VEHICLE)
 
@@ -46,6 +48,9 @@ function ENT:OnTakeDamage( dmg )
 
 	elseif( vehicle_damage )then --+ vehicles damage(vehicles explosions etc.) just fucking annihilates barbed wire
 		self:SetHealth(0)
+
+	elseif( fire_damage )then --+ fire go frrrrrooooooooo
+		self:SetHealth(self:Health() -  math.random(30,70))
 	end
 
 	if( self:Health() <= 0 )then --+ fucking logic
