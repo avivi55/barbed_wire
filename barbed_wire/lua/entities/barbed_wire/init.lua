@@ -1,6 +1,6 @@
 --[[
 * Hello Dear Dev, if you read this you just downloaded my addon.
-* I must warn you, I am not the best coder, I tried to optimise it as I could. But it isn't perfect.
+* I must warn you, I am not the best coder, I tried to optimize it as I could. But it isn't perfect.
 * if you are wondering why I use "? * ! +" in front of my commentary it is just the better commentary extention for VS Code
 ? if you have any problems with my addon you can contact me on steam or my github : "https://github.com/avivi55"
 ! It uses Fortification Props Model Pack "https://steamcommunity.com/sharedfiles/filedetails/?id=422672588"
