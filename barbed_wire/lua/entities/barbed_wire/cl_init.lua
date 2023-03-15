@@ -1,5 +1,5 @@
-include('shared.lua')
+include( 'shared.lua' )
 
-function ENT:Draw()
-    self:DrawModel()
+function ENT:Draw( flags )
+    self:DrawModel( flags )
 end
