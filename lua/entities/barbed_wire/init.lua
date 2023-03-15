@@ -104,7 +104,7 @@ function ENT:StartTouch( ent )
 
 	--+ dealing damage to a player
 	if ( ent:IsPlayer() and ent:Alive() ) or ent:IsNPC() then
-		if (self.Delays[ ent:EntIndex() ] or 0) > CurTime() then return end
+		if ( ( self.Delays[ ent:EntIndex() ] or 0 ) > CurTime() ) then return end
 		self.Delays[ ent:EntIndex() ] = CurTime() + 0.5
 
 		local dmg = DamageInfo()
